@@ -1,0 +1,18 @@
+{% extends 'Dance_Info/base.html' %}
+
+{% block title %}
+{{ title}}
+{% endblock %}
+
+{% block content %}
+    <h1>Тренер</h1>
+	{% for el in coaches %}
+		<div class="alert alert-warning mt-2">
+			<h3>{{ el.title }}</h3>
+			<p1>{{ el.coach_surname }}<br>:</p1>
+			<p2>{{ el.coach_name }}<br>:</p2>
+			<p3>{{ el.telephone }}<br>:</p3>
+			<p4>{{ el.mail }}</p4>
+		</div>
+	{% endfor %}
+{% endblock %}

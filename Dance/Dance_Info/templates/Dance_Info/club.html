@@ -1,0 +1,17 @@
+{% extends 'Dance_Info/base.html' %}
+
+{% block title %}
+{{ title}}
+{% endblock %}
+
+{% block content %}
+    <h1>Клуб</h1>
+	{% for el in clubs %}
+		<div class="alert alert-warning mt-2">
+			<h3>{{ el.title }}</h3>
+			<p1>{{ el.club_name }}<br>:</p1>
+			<p2>{{ el.coach }}<br>:</p2>
+			<p3>{{ el.city }}</p3>
+		</div>
+	{% endfor %}
+{% endblock %}
